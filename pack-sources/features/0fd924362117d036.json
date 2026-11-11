@@ -1,0 +1,108 @@
+{
+  "_id": "0fd924362117d036",
+  "name": "Meeting of Minds",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Starting at 13th level, as a reaction when an ally you are linked with successfully lands a weapon attack, you may transfer the link and all link depth attached to that link to the target of the weapon attack. You can use this ability once and regain its use at the end of a short or long rest. If you do so, you are unable to use mood manipulations until the end of your next turn.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-meeting",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 13,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 13; Icon of Sorcery",
+    "properties": [],
+    "activities": {
+      "48d5387cb17db84d": {
+        "_id": "48d5387cb17db84d",
+        "type": "utility",
+        "name": "Meeting of Minds",
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "meeting"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "sr",
+          "type": "recoverAll"
+        }
+      ]
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "meeting",
+      "icon": "sorcery",
+      "level": 13
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!0fd924362117d036"
+}

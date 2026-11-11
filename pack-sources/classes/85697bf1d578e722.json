@@ -1,0 +1,484 @@
+{
+  "_id": "85697bf1d578e722",
+  "name": "Empath",
+  "type": "class",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>An unarmored empath builds emotional links and spends their depth to influence creatures.</p><p>d6 Hit Die. Primary class: Wisdom and Charisma saves, Disguise Kit, and two skills from Animal Handling, Deception, Insight, Intimidation, Perception, Performance, Persuasion. No armor or weapon proficiencies.</p><p>Equipment: choose quarterstaff, improvised sling with 20 rocks, or kitchen knife; choose diplomat’s, entertainer’s, or explorer’s pack; gain a disguise kit. Equipment is selected manually.</p><p>Use native class advancement for hit points, ASIs, and Icon choice. Level-one HP uses the standard maximum Hit Die (6 + Constitution), correcting the source’s ambiguous d6 notation. Multiclass prerequisites and additional proficiencies are left to the GM.</p><table><tr><th>Level</th><th>Aura</th><th>Features</th></tr><tr><td>1</td><td>30 ft.</td><td>@UUID[Compendium.empath-class.features.Item.6d7c0eb420852d2e]{Aura}, @UUID[Compendium.empath-class.features.Item.b1b1bdb480c61d07]{Link}, @UUID[Compendium.empath-class.features.Item.a3ce0b6106cdb398]{The Right Place at the Right Time}, @UUID[Compendium.empath-class.features.Item.ee0e4f309c9a4731]{Mood Manipulation}, @UUID[Compendium.empath-class.features.Item.f87fc5cd9bc5cd06]{Apathy}, @UUID[Compendium.empath-class.features.Item.9f4bd42786b21b13]{Fervor}</td></tr><tr><td>2</td><td>30 ft.</td><td>@UUID[Compendium.empath-class.features.Item.ded32129b05bfc16]{Link Depth}, @UUID[Compendium.empath-class.features.Item.5c78c8e7160e76ba]{Pain Resonance}, @UUID[Compendium.empath-class.features.Item.c38e8334242ffdf0]{Inspirational Mantle}</td></tr><tr><td>3</td><td>30 ft.</td><td>@UUID[Compendium.empath-class.features.Item.c2d4b446a44ce54f]{Iconic Nature}</td></tr><tr><td>4</td><td>35 ft.</td><td>Ability Score Increase</td></tr><tr><td>5</td><td>35 ft.</td><td>@UUID[Compendium.empath-class.features.Item.22fefa8cf4bda918]{Insidious Influence}</td></tr><tr><td>6</td><td>35 ft.</td><td>@UUID[Compendium.empath-class.features.Item.e7444343ba0a70a2]{Imprint Affect}</td></tr><tr><td>7</td><td>40 ft.</td><td>@UUID[Compendium.empath-class.features.Item.7d21b3384028efa0]{Lingering Link}</td></tr><tr><td>8</td><td>40 ft.</td><td>Ability Score Increase</td></tr><tr><td>9</td><td>40 ft.</td><td>Icon feature</td></tr><tr><td>10</td><td>45 ft.</td><td>@UUID[Compendium.empath-class.features.Item.c8dee78f8c7b466c]{Extra Link}</td></tr><tr><td>11</td><td>45 ft.</td><td>@UUID[Compendium.empath-class.features.Item.e88853216dc0a71e]{Improved Empathy}</td></tr><tr><td>12</td><td>45 ft.</td><td>Ability Score Increase</td></tr><tr><td>13</td><td>50 ft.</td><td>Icon feature</td></tr><tr><td>14</td><td>50 ft.</td><td>@UUID[Compendium.empath-class.features.Item.3cb968a982080be1]{Heart to Heart}</td></tr><tr><td>15</td><td>50 ft.</td><td>@UUID[Compendium.empath-class.features.Item.56681010b753e1ab]{Cloud Mind}</td></tr><tr><td>16</td><td>55 ft.</td><td>Ability Score Increase</td></tr><tr><td>17</td><td>55 ft.</td><td>Icon feature</td></tr><tr><td>18</td><td>55 ft.</td><td>@UUID[Compendium.empath-class.features.Item.ad12f62c45fc1344]{Trauma Dump}</td></tr><tr><td>19</td><td>60 ft.</td><td>Ability Score Increase</td></tr><tr><td>20</td><td>60 ft.</td><td>@UUID[Compendium.empath-class.features.Item.486ea46224d1bb4f]{Share Your World}</td></tr></table><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source and complete flavor text</a></p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath",
+    "levels": 1,
+    "hd": {
+      "denomination": "d6",
+      "spent": 0,
+      "additional": ""
+    },
+    "primaryAbility": {
+      "value": [
+        "wis",
+        "cha"
+      ],
+      "all": false
+    },
+    "properties": [],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "wis"
+    },
+    "advancement": [
+      {
+        "_id": "93969d193161ae6f",
+        "type": "HitPoints",
+        "configuration": {},
+        "value": {},
+        "title": "Hit Points"
+      },
+      {
+        "_id": "e48c3a03b7360721",
+        "type": "Trait",
+        "level": 1,
+        "classRestriction": "primary",
+        "configuration": {
+          "mode": "default",
+          "grants": [
+            "saves:wis",
+            "saves:cha"
+          ],
+          "choices": [],
+          "allowReplacements": false
+        },
+        "value": {
+          "chosen": []
+        }
+      },
+      {
+        "_id": "f9d35d43770d3909",
+        "type": "Trait",
+        "level": 1,
+        "classRestriction": "primary",
+        "configuration": {
+          "mode": "default",
+          "grants": [
+            "tool:disg"
+          ],
+          "choices": [],
+          "allowReplacements": false
+        },
+        "value": {
+          "chosen": []
+        }
+      },
+      {
+        "_id": "32c1cf49a2feee26",
+        "type": "Trait",
+        "level": 1,
+        "classRestriction": "primary",
+        "configuration": {
+          "mode": "default",
+          "grants": [],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "skills:ani",
+                "skills:dec",
+                "skills:ins",
+                "skills:itm",
+                "skills:prc",
+                "skills:prf",
+                "skills:per"
+              ]
+            }
+          ],
+          "allowReplacements": false
+        },
+        "value": {
+          "chosen": []
+        }
+      },
+      {
+        "_id": "6946ed5805efe531",
+        "type": "Subclass",
+        "level": 3,
+        "title": "Iconic Nature",
+        "configuration": {},
+        "value": {}
+      },
+      {
+        "_id": "eb7ffc8378e016d3",
+        "type": "ScaleValue",
+        "title": "Aura Range",
+        "configuration": {
+          "identifier": "aura",
+          "type": "distance",
+          "distance": {
+            "units": "ft"
+          },
+          "scale": {
+            "1": {
+              "value": 30
+            },
+            "4": {
+              "value": 35
+            },
+            "7": {
+              "value": 40
+            },
+            "10": {
+              "value": 45
+            },
+            "13": {
+              "value": 50
+            },
+            "16": {
+              "value": 55
+            },
+            "19": {
+              "value": 60
+            }
+          }
+        },
+        "value": {}
+      },
+      {
+        "_id": "e321c445a5b7510d",
+        "type": "ItemGrant",
+        "level": 1,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.6d7c0eb420852d2e",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.b1b1bdb480c61d07",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.a3ce0b6106cdb398",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.ee0e4f309c9a4731",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.f87fc5cd9bc5cd06",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.9f4bd42786b21b13",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "44ff8e705b0f66a0",
+        "type": "ItemGrant",
+        "level": 2,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.ded32129b05bfc16",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.5c78c8e7160e76ba",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.c38e8334242ffdf0",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "80b213e74de3deff",
+        "type": "ItemGrant",
+        "level": 3,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.c2d4b446a44ce54f",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "f7288bfb2c16cf83",
+        "type": "ItemGrant",
+        "level": 5,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.22fefa8cf4bda918",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "a3fde53f4b878511",
+        "type": "ItemGrant",
+        "level": 6,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.e7444343ba0a70a2",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "7f6f9a2e67360f92",
+        "type": "ItemGrant",
+        "level": 7,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.7d21b3384028efa0",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "3d2f9148cb19169f",
+        "type": "ItemGrant",
+        "level": 10,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.c8dee78f8c7b466c",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "1f70f580f71c57fc",
+        "type": "ItemGrant",
+        "level": 11,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.e88853216dc0a71e",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "ccf16fc77f6dfa85",
+        "type": "ItemGrant",
+        "level": 14,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.3cb968a982080be1",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "43d937d28b66e437",
+        "type": "ItemGrant",
+        "level": 15,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.56681010b753e1ab",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "b5929dbcabe0aa10",
+        "type": "ItemGrant",
+        "level": 18,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.ad12f62c45fc1344",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "96caca0d9ea5f15e",
+        "type": "ItemGrant",
+        "level": 20,
+        "title": "Empath Features",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.486ea46224d1bb4f",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "c6b789e9acf29060",
+        "type": "AbilityScoreImprovement",
+        "level": 4,
+        "title": "Ability Score Increase",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": []
+        },
+        "value": {}
+      },
+      {
+        "_id": "025d6c55de630610",
+        "type": "AbilityScoreImprovement",
+        "level": 8,
+        "title": "Ability Score Increase",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": []
+        },
+        "value": {}
+      },
+      {
+        "_id": "a5e9c6b9535a1907",
+        "type": "AbilityScoreImprovement",
+        "level": 12,
+        "title": "Ability Score Increase",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": []
+        },
+        "value": {}
+      },
+      {
+        "_id": "cf7c10b6462f32b2",
+        "type": "AbilityScoreImprovement",
+        "level": 16,
+        "title": "Ability Score Increase",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": []
+        },
+        "value": {}
+      },
+      {
+        "_id": "2eaf9b6ad0292e51",
+        "type": "AbilityScoreImprovement",
+        "level": 19,
+        "title": "Ability Score Increase",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": []
+        },
+        "value": {}
+      }
+    ],
+    "startingEquipment": []
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "class"
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!85697bf1d578e722"
+}

@@ -1,0 +1,103 @@
+{
+  "_id": "5800768b32a54c54",
+  "name": "Turbulence",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Expend two link depth on an allied link. All allies within your aura gain the following ability:</p><p>When an enemy that is farther than 15 feet away from you makes a ranged weapon attack against you, you may expend your reaction to force that enemy to make a Wisdom saving throw. On a failed save, that attack and all future ranged weapon attacks made by that creature against you automatically miss until the start of its next turn. This lasts for one minute, or until your link breaks.</p><p><strong>Sustain:</strong> two link depth.</p><p><strong>Energize:</strong> Expend one link depth. Until turbulence ends, even creatures within 15 feet of you are affected by this aura.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-turbulence",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 9,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 9; Icon of the Crowds",
+    "properties": [],
+    "activities": {
+      "995cbc59c1180896": {
+        "_id": "995cbc59c1180896",
+        "type": "utility",
+        "name": "Turbulence",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "turbulence"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "turbulence",
+      "icon": "crowds",
+      "level": 9
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!5800768b32a54c54"
+}

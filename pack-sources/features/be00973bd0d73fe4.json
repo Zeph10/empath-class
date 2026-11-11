@@ -1,0 +1,103 @@
+{
+  "_id": "be00973bd0d73fe4",
+  "name": "Incarnate Aura",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>At 17th level, you gain access to two new auras: Vigilance and Trouble.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-incarnate",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 17,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 17; Icon of the Crowds",
+    "properties": [],
+    "activities": {
+      "9004c3c3260d0ea4": {
+        "_id": "9004c3c3260d0ea4",
+        "type": "utility",
+        "name": "Open Empath Manager",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "manager"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "incarnate",
+      "icon": "crowds",
+      "level": 17
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!be00973bd0d73fe4"
+}

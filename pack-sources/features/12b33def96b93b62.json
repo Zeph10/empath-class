@@ -1,0 +1,103 @@
+{
+  "_id": "12b33def96b93b62",
+  "name": "Fearmonger",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>The Icon of Terror is born from a large group of people witnessing something horrific. Those who bear this power can manipulate the deepest fears of those unlucky enough to enter their aura.</p><p>Starting at 3rd level, the way you interact with others through your links changes. Creatures that are immune to the frightened condition cannot be linked to. Creatures that gain advantage on saving throws against frightened have advantage on the saving throw to resist increasing their link's depth. However, creatures that have neither have disadvantage on saving throws to resist increasing their link's depth.</p><p>In addition, the following mood manipulations: Fear of Disappointment and Terrorize.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-fearmonger",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 3,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 3; Icon of Terror",
+    "properties": [],
+    "activities": {
+      "b3377ab5d8d6f455": {
+        "_id": "b3377ab5d8d6f455",
+        "type": "utility",
+        "name": "Open Empath Manager",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "manager"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "fearmonger",
+      "icon": "terror",
+      "level": 3
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!12b33def96b93b62"
+}

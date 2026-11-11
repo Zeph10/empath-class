@@ -1,0 +1,103 @@
+{
+  "_id": "2a6abca4e3345424",
+  "name": "Violence",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Expend two link depth on an enemy link. Each hostile creature who starts or willingly moves into the range of your aura makes a Wisdom saving throw. They take 3d8 psychic damage on a failed save. This lasts for one minute, or until your link breaks.</p><p><strong>Energize:</strong> Spend two link depth to increase the damage dealt to hostile creatures by 1d8. This can be used any number of times until Violence ends.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-violence",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 9,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 9; Icon of the Crowds",
+    "properties": [],
+    "activities": {
+      "86ba68b9120a1e17": {
+        "_id": "86ba68b9120a1e17",
+        "type": "utility",
+        "name": "Violence",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "violence"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "violence",
+      "icon": "crowds",
+      "level": 9
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!2a6abca4e3345424"
+}

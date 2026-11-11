@@ -1,0 +1,103 @@
+{
+  "_id": "6077e63824e7f482",
+  "name": "Vigilance",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Check</strong> eight link depth on allies. Allies within vigilance have advantage on saving throws against spells and other magical effects. This lasts for one minute, or until your link breaks.</p><p><strong>Sustain:</strong> three link depth.</p><p><strong>Energize:</strong> Expend two link depth. Until Vigilance ends, spells have no effect on a successful save.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-vigilance",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 17,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 17; Icon of the Crowds",
+    "properties": [],
+    "activities": {
+      "0bdfdb2276df0dea": {
+        "_id": "0bdfdb2276df0dea",
+        "type": "utility",
+        "name": "Vigilance",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "vigilance"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "vigilance",
+      "icon": "crowds",
+      "level": 17
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!6077e63824e7f482"
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "c2735f560f1f2960",
+  "name": "Open Empath Manager",
+  "type": "script",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "scope": "global",
+  "command": "game.empath.open();",
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!macros!c2735f560f1f2960"
+}

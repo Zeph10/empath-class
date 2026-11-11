@@ -1,0 +1,103 @@
+{
+  "_id": "ded32129b05bfc16",
+  "name": "Link Depth",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Upon reaching 2nd level, you gain the ability to store empathic energy within the bonds you share with friend or foe. Whenever a linked target ends its turn, you may force it to make a Wisdom saving throw. On a failed save, the link depth for their link is increased by one as long as they are a worthy foe. A creature may choose to fail their saving throw if they wish. This power can be used to empower your empath abilities and describes the intensity of your emotional connection.</p><p>All link depth is lost when the link is broken. The maximum depth you can accrue on a target is equal to your Charisma modifier (minimum one). Whenever link depth is expended, a display occurs which signals a supernatural event. Examples of displays can be auditory (such as bass-pitched hum), material (such as the target or an area briefly being slicked with translucent gel which shortly disappears), mental (such as a subtle chime ringing in the minds of those nearby), olfactory (such as an odd but familiar odor bringing to mind a brief mental flash of a long-buried memory), or visual (such as the empath's eyes glowing like points of silver fire). Regardless, it is clear that the empath is the source of this supernatural event.</p><p>You gain the following mood manipulations: Pain Resonance and Inspirational Mantle.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-depth",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 2,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 2",
+    "properties": [],
+    "activities": {
+      "20fbdb7511c4cb5b": {
+        "_id": "20fbdb7511c4cb5b",
+        "type": "utility",
+        "name": "Open Empath Manager",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "manager"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "depth",
+      "icon": "base",
+      "level": 2
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!ded32129b05bfc16"
+}

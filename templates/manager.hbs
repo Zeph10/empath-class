@@ -1,0 +1,31 @@
+<div class="empath-body">
+ {{#if hasActor}}
+ {{#if multi}}<label class="empath-pick">Empath <select name="actor">{{#each actors}}<option value="{{id}}" {{#if selected}}selected{{/if}}>{{name}}</option>{{/each}}</select></label>{{/if}}
+ <div class="empath-stats"><strong>{{name}} · {{icon}}</strong><span>Level {{p.level}}</span><span>Save DC {{p.dc}}</span><span>Aura {{p.range}} ft</span><span>Links {{links.length}}/{{p.links}}</span><span>Depth cap {{p.capacity}}</span></div>
+ {{#if noIcon}}<p class="empath-missing">Level 3+ but no Icon subclass found on this character.</p>{{/if}}
+ {{#if missing}}<p class="empath-missing">Not found on this character: {{missing}}. Add them from the compendium; actions still work from this window.</p>{{/if}}
+ {{#unless tokenPresent}}<p class="empath-missing">Place this Empath’s token on the scene: ranges and auras need it.</p>{{/unless}}
+ {{#if disabled}}<p class="empath-missing">Aura disabled by the GM.</p>{{/if}}
+ {{#if armorBlock}}<p class="empath-missing">Aura blocked: {{armorBlock}}</p>{{/if}}
+ {{#if blocked}}<p class="empath-missing">Mood manipulations are unavailable until your next turn ends (Meeting of Minds).</p>{{/if}}
+ <div class="empath-head"><h3>Links</h3><button data-action="use" data-key="link" class="{{#unless canLink}}empath-dim{{/unless}}" title="Bonus action. Target a creature first, or pick from a list of creatures in your aura.">＋ Form Link{{#if targets}} with {{targets}}{{/if}}</button></div>
+ {{#each links}}
+ <section class="empath-link {{#if hostile}}empath-hostile{{else}}empath-ally{{/if}}">
+  <div class="empath-link-top"><strong>{{name}}</strong><span class="empath-badge">{{#if hostile}}Hostile{{else}}Ally{{/if}}</span><span class="{{#if far}}empath-missing{{/if}}">{{distance}}{{#if far}} — outside aura{{/if}}</span>{{#if lingering}}<em>Lingering: back in range by your turn end</em>{{/if}}
+   <span class="empath-pips" title="{{depth}}/{{capacity}} link depth">{{#each pips}}<i class="{{#if this}}on{{/if}}"></i>{{/each}} <b>{{depth}}/{{capacity}}</b></span></div>
+  {{#if moods}}<div class="empath-actions">{{#each moods}}<button data-action="use" data-key="{{key}}" data-param="L:{{../id}}" title="{{tip}}" class="{{#if dim}}empath-dim{{/if}}">{{name}} <span class="empath-cost">{{cost}}</span></button>{{/each}}</div>{{/if}}
+  {{#if auraActions}}<div class="empath-actions empath-auras"><span class="empath-label">Auras</span>{{#each auraActions}}<button data-action="use" data-key="{{key}}" data-param="L:{{../id}}" title="{{tip}}" class="{{#if dim}}empath-dim{{/if}}">{{name}} <span class="empath-cost">{{cost}}</span></button>{{/each}}</div>{{/if}}
+  <div class="empath-actions empath-minor"><button data-action="use" data-key="depth-gain" data-param="{{id}}" title="{{depthHint}}" class="{{#if full}}empath-dim{{/if}}">Build Depth</button><button data-action="use" data-key="contest" data-param="L:{{id}}" title="Action: Wisdom (Insight) against Charisma (Deception) to read surface thoughts.">Probe Thoughts</button>{{#if ../isGM}}<button data-action="use" data-key="edit" data-param="{{id}}">GM Controls</button>{{/if}}</div>
+  {{#each held}}<div class="empath-held">Holding <strong>{{name}}</strong>{{#if concentration}} (concentration){{/if}}{{#if instant}} (cleared at your next turn){{/if}} <button data-action="use" data-key="end-cast" data-param="{{castId}}">End spell</button></div>{{/each}}
+ </section>
+ {{else}}<p class="empath-hint">No links yet. Target a creature in your aura and click Form Link, or just click it to pick from a list.</p>{{/each}}
+ {{#if auras}}<h3>Active Auras</h3>{{#each auras}}<div class="empath-row"><span><strong>{{name}}</strong> via {{link}}{{#if energized}} · energized{{/if}}{{#if sustain}} · sustain {{sustain}}/turn{{#if autoSustain}} (automatic){{/if}}{{/if}}</span><span>{{#if canEnergize}}<button data-action="use" data-key="energize" data-param="{{id}}">Energize <span class="empath-cost">{{energizeCost}}</span></button>{{/if}}<button data-action="use" data-key="end-aura" data-param="{{id}}">End</button></span></div>{{/each}}{{/if}}
+ {{#if sorcery}}<div class="empath-head"><h3>Spells</h3><button data-action="spells">Manage Spells</button></div>
+  {{#if spells}}<div class="empath-actions">{{#each spells}}<button data-action="use" data-key="cast" data-param="{{id}}" title="Cast through a link. Cost: 2 energy per spell level.">{{name}} <span class="empath-cost">{{#if level}}lvl {{level}}{{else}}cantrip{{/if}}</span></button>{{/each}}</div>{{else}}<p class="empath-hint">No spells chosen yet. Click Manage Spells.</p>{{/if}}{{/if}}
+ {{#if active}}<h3>Active Effects</h3><ul class="empath-active">{{#each active}}<li><img src="{{img}}" alt=""><strong>{{name}}</strong> on {{target}}{{#if detail}} <span class="empath-detail">— {{detail}}</span>{{/if}}</li>{{/each}}</ul>{{/if}}
+ {{#if general}}<h3>Other Actions</h3><div class="empath-actions">{{#each general}}<button data-action="use" data-key="{{key}}" title="{{tip}}" class="{{#if dim}}empath-dim{{/if}}">{{name}}{{#if cost}} <span class="empath-cost">{{cost}}</span>{{/if}}</button>{{/each}}</div>{{/if}}
+ {{#if reactions}}<h3>Reactions</h3><p class="empath-hint">These appear as a chat card with a button when their trigger happens. You can also start one here.</p><div class="empath-actions">{{#each reactions}}<button data-action="use" data-key="{{key}}" title="{{tip}}">{{name}}{{#if cost}} <span class="empath-cost">{{cost}}</span>{{/if}}</button>{{/each}}</div>{{/if}}
+ <details class="empath-more"><summary>More</summary><div class="empath-actions"><button data-action="use" data-key="resolve" title="Fallback for a hit or damage the module could not detect (nothing was targeted, or damage was applied by hand).">Manual Resolve</button>{{#if isGM}}<button data-action="controls">Aura Controls (GM)</button>{{/if}}</div>
+ <p class="empath-hint">Depth builds on its own when a linked creature ends its turn. Saves, damage and effects are applied automatically; damage cards have an Undo button. A GM must be connected.</p></details>
+ {{else}}<p>Add the Empath class from “Empath — Class & Icons” to a character you own, then open this window again.</p>{{/if}}
+</div>

@@ -1,0 +1,103 @@
+{
+  "_id": "019cd0a96f5d148d",
+  "name": "Trepidation",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Expend one link depth on an enemy. All enemies suffer the following effect: When a hostile creature in the aura makes an attack roll or a saving throw, the target must roll a d4 and subtract the number rolled to the attack roll or saving throw. This lasts for one minute, or until your link breaks.</p><p><strong>Energize:</strong> Expend one link depth. Until Trepidation ends, roll the d4 at advantage.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-trepidation",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 3,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 3; Icon of the Crowds",
+    "properties": [],
+    "activities": {
+      "a9bddb7eafe50d30": {
+        "_id": "a9bddb7eafe50d30",
+        "type": "utility",
+        "name": "Trepidation",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "trepidation"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "trepidation",
+      "icon": "crowds",
+      "level": 3
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!019cd0a96f5d148d"
+}

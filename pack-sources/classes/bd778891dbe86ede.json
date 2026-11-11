@@ -1,0 +1,132 @@
+{
+  "_id": "bd778891dbe86ede",
+  "name": "Icon of Terror",
+  "type": "subclass",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Icon of Terror. Features at Empath levels 3, 9, 13, and 17.</p><p>@UUID[Compendium.empath-class.features.Item.12b33def96b93b62]{Fearmonger} (level 3)</p><p>@UUID[Compendium.empath-class.features.Item.4171913bb2ef8d13]{Fear of Disappointment} (level 3)</p><p>@UUID[Compendium.empath-class.features.Item.bfd619d2dd7dcf0d]{Terrorize} (level 3)</p><p>@UUID[Compendium.empath-class.features.Item.d811aa2ea4fed8ee]{Widespread Fear} (level 9)</p><p>@UUID[Compendium.empath-class.features.Item.48ffcddb8b19a5f9]{Fear of Missing Out} (level 9)</p><p>@UUID[Compendium.empath-class.features.Item.8406671df431d85b]{Intrusive Thoughts} (level 9)</p><p>@UUID[Compendium.empath-class.features.Item.2dd00bd77e0222ce]{Challenge Heart} (level 13)</p><p>@UUID[Compendium.empath-class.features.Item.16d34b5e7bcb341e]{Fear of Failure} (level 13)</p><p>@UUID[Compendium.empath-class.features.Item.6bdaf554e42029bd]{Jump Scare} (level 13)</p><p>@UUID[Compendium.empath-class.features.Item.34d6231c09aa82a5]{Crisis of Life} (level 17)</p><p>@UUID[Compendium.empath-class.features.Item.52c8e02987ccb1b0]{Fear of Death} (level 17)</p><p>@UUID[Compendium.empath-class.features.Item.361e48d0308f20e3]{Fear’s End} (level 17)</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "icon-of-terror",
+    "classIdentifier": "empath",
+    "spellcasting": {
+      "progression": "none",
+      "ability": "wis"
+    },
+    "advancement": [
+      {
+        "_id": "d892b7eb2ad083d0",
+        "type": "ItemGrant",
+        "level": 3,
+        "title": "Icon of Terror",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.12b33def96b93b62",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.4171913bb2ef8d13",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.bfd619d2dd7dcf0d",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "dab2ecc9739e6e67",
+        "type": "ItemGrant",
+        "level": 9,
+        "title": "Icon of Terror",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.d811aa2ea4fed8ee",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.48ffcddb8b19a5f9",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.8406671df431d85b",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "7734d956ddb2db26",
+        "type": "ItemGrant",
+        "level": 13,
+        "title": "Icon of Terror",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.2dd00bd77e0222ce",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.16d34b5e7bcb341e",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.6bdaf554e42029bd",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "c5c69546cb21076e",
+        "type": "ItemGrant",
+        "level": 17,
+        "title": "Icon of Terror",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.34d6231c09aa82a5",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.52c8e02987ccb1b0",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.361e48d0308f20e3",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "terror"
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!bd778891dbe86ede"
+}

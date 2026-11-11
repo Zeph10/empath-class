@@ -1,0 +1,103 @@
+{
+  "_id": "f87fc5cd9bc5cd06",
+  "name": "Apathy",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>You may attempt to thwart a linked foe's attempts at aggression. By spending an action, you may force a linked creature to make a Wisdom saving throw. On a failed save, their next instance of damage dealt is reduced by 1d4 + your Charisma modifier and they are unable to critically hit while under this effect. Upon reaching 5th, 11th, and 17th levels, increase the amount of damage reduced by an additional 1d4. This effect can stack with other instances of Apathy.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-apathy",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 1,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 1",
+    "properties": [],
+    "activities": {
+      "4a57db0260f3b87a": {
+        "_id": "4a57db0260f3b87a",
+        "type": "utility",
+        "name": "Apathy",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "apathy"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "apathy",
+      "icon": "base",
+      "level": 1
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!f87fc5cd9bc5cd06"
+}

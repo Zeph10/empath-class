@@ -1,0 +1,103 @@
+{
+  "_id": "8406671df431d85b",
+  "name": "Intrusive Thoughts",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Summon forth forbidden thoughts for your enemies to act upon. You can spend your action to expend three link depth from the link of a linked foe to force them spend their next bonus action to make a weapon attack at advantage against a target of your choice at any point during their turn. If this attack hits, the attacked creature becomes frightened of your linked target until they leave your aura. This attack does not suffer from disadvantage due to being frightened.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-intrusive",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 9,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 9; Icon of Terror",
+    "properties": [],
+    "activities": {
+      "83e7c8bbdcd3d1f6": {
+        "_id": "83e7c8bbdcd3d1f6",
+        "type": "utility",
+        "name": "Intrusive Thoughts",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "intrusive"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "intrusive",
+      "icon": "terror",
+      "level": 9
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!8406671df431d85b"
+}

@@ -1,0 +1,103 @@
+{
+  "_id": "021ad7e84521450d",
+  "name": "Spellcasting",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>An Icon of Sorcery may form in response to profound displays of magical power. Those with this icon are able to convert emotions into magical power.</p><p>When you reach 3rd level, you gain spellcasting.</p><p><strong>Casting Empath Spells</strong> Empaths do not cast spells using spell slots and instead expend link depth. When you cast a spell, first select which of your active links will cast the spell and the linked creature associated with that link. The spell must include either yourself or that creature, and the link must have at least one link depth if it casting a leveled spell. The spell originates either from your space or that creature's space. Expend link depth equal to twice the spell level from any active links, hostile links count double.</p><p>When you cast a spell gained from this subclass with a duration of more than one round, the spell ends if the link designated for the casting breaks. You can only cast empath spells in this way even if you know spells from another class or feature.</p><p><strong>Cantrips.</strong> You learn two cantrips of your choice from the icon of sorcery spell list (found at the end of this subclass). You learn an additional cantrip of your choice at 10th level. 0 linked depth is needed to cast a cantrip.</p><p><strong>Leveled Spells</strong> You know two 1st-level icon of sorcery spells of your choice from the icon of sorcery spell list (shown at the end of this subclass).</p><p>The Spells Known column of the Icon of Sorcery Spellcasting table shows when you learn more leveled spells. A spell you choose must be of a level no higher than what's shown in the table's Maximum Spell Level column for your level. For example, at level ten you can learn a spell of 1st, 2nd, or 3rd level, and 3 is the highest level you can upcast your spells.</p><p>Whenever you gain a level in this class, you can replace one of the icon of sorcery spells you know with another spell of your choice from the icon of sorcery spell list. The new spell must be of a level no higher than what's shown in the table's Maximum Spell Level column for your level.</p><p><strong>Spellcasting Ability.</strong> Wisdom is your spellcasting ability for your icon of sorcery spells.</p><p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</p><p><strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p><p><strong>Spells and Concentration.</strong> Empaths do not concentrate on spells in the traditional way. Instead, they designate a link to hold their concentration when they cast a spell, each of which can concentrate on a single spell. If the link breaks, they are considered to have lost concentration, and the spell ends. They cannot lose concentration by taking damage.</p><table><thead><tr><th>Icon of Sorcery Level</th><th>Cantrips Known</th><th>Spells Known</th><th>Maximum Spell Level</th></tr></thead><tbody><tr><td>3rd</td><td>2</td><td>2</td><td>1</td></tr><tr><td>4th</td><td>2</td><td>2</td><td>1</td></tr><tr><td>5th</td><td>2</td><td>3</td><td>2</td></tr><tr><td>6th</td><td>2</td><td>3</td><td>2</td></tr><tr><td>7th</td><td>2</td><td>4</td><td>2</td></tr><tr><td>8th</td><td>3</td><td>4</td><td>2</td></tr><tr><td>9th</td><td>3</td><td>5</td><td>3</td></tr><tr><td>10th</td><td>3</td><td>5</td><td>3</td></tr><tr><td>11th</td><td>3</td><td>6</td><td>3</td></tr><tr><td>12th</td><td>3</td><td>6</td><td>3</td></tr><tr><td>13th</td><td>3</td><td>7</td><td>4</td></tr><tr><td>14th</td><td>3</td><td>7</td><td>4</td></tr><tr><td>15th</td><td>3</td><td>8</td><td>4</td></tr><tr><td>16th</td><td>3</td><td>8</td><td>4</td></tr><tr><td>17th</td><td>3</td><td>9</td><td>5</td></tr><tr><td>18th</td><td>3</td><td>9</td><td>5</td></tr><tr><td>19th</td><td>3</td><td>10</td><td>5</td></tr><tr><td>20th</td><td>4</td><td>10</td><td>5</td></tr></tbody></table><p><em>Module note: The cantrip text (additional cantrip at 10th level) and the table (3 at 8th, 4 at 20th) disagree; the module follows the table.</em></p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-sorcery",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 3,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 3; Icon of Sorcery",
+    "properties": [],
+    "activities": {
+      "181e8a735e89b776": {
+        "_id": "181e8a735e89b776",
+        "type": "utility",
+        "name": "Open Empath Manager",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "manager"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "sorcery",
+      "icon": "sorcery",
+      "level": 3
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!021ad7e84521450d"
+}

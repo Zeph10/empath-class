@@ -1,0 +1,30 @@
+# Publishing a GitHub release (tag like v1.5.1) builds the installable module and attaches it to the release.
+# Foundry installs/updates from: https://github.com/<you>/<repo>/releases/latest/download/module.json
+name: Release module
+on:
+  release:
+    types: [published]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stamp version and install URLs into module.json
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          REPO="https://github.com/${GITHUB_REPOSITORY}"
+          jq --arg v "$VERSION" --arg url "$REPO" \
+             --arg manifest "$REPO/releases/latest/download/module.json" \
+             --arg download "$REPO/releases/download/${GITHUB_REF_NAME}/module.zip" \
+             '.version=$v | .url=$url | .manifest=$manifest | .download=$download' module.json > module.tmp
+          mv module.tmp module.json
+      - name: Build module.zip (module.json at the zip root)
+        run: zip -r module.zip module.json scripts styles templates packs plutonium README.md CHANGELOG.md AUTOMATION.md LICENSE
+      - name: Attach module.json and module.zip to the release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            module.json
+            module.zip

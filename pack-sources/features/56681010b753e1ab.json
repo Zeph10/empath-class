@@ -1,0 +1,108 @@
+{
+  "_id": "56681010b753e1ab",
+  "name": "Cloud Mind",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Beginning at 15th level, you can cause others to become unaware of your existence. Once per short rest, you may force all creatures within range of your aura to make a Wisdom saving throw, or else you become Hidden to them. If you activate any class features, cast a spell, activate a magic item or make an attack, this effect automatically ends, and if you interact with the environment in a noticeable way, they may attempt the saving throw once more. This effect lasts for ten minutes, or until you end your turn with them outside your aura.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-cloud",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 15,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 15",
+    "properties": [],
+    "activities": {
+      "5c6dc67ae0ec1b03": {
+        "_id": "5c6dc67ae0ec1b03",
+        "type": "utility",
+        "name": "Cloud Mind",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "cloud"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "sr",
+          "type": "recoverAll"
+        }
+      ]
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "cloud",
+      "icon": "base",
+      "level": 15
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!56681010b753e1ab"
+}

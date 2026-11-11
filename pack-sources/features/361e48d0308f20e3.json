@@ -1,0 +1,103 @@
+{
+  "_id": "361e48d0308f20e3",
+  "name": "Fear’s End",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>A terror so deep that it grows into hopelessness. You can spend an action to expend six link depth from the link of a linked foe to force them to make a Wisdom saving throw. On a failed save, they must spend their action making a weapon attack against themselves at advantage using their most powerful attack. This attack does not suffer from disadvantage due to being frightened. On a successful hit, the attack does critical damage and the target takes 100 psychic damage. On a successful saving throw, the target takes 50 psychic damage.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-end",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 17,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 17; Icon of Terror",
+    "properties": [],
+    "activities": {
+      "803aecc6086f147a": {
+        "_id": "803aecc6086f147a",
+        "type": "utility",
+        "name": "Fear’s End",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "end"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "end",
+      "icon": "terror",
+      "level": 17
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!361e48d0308f20e3"
+}

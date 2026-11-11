@@ -1,0 +1,103 @@
+{
+  "_id": "6d7c0eb420852d2e",
+  "name": "Aura",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>At 1st level you have an aura that enables you to understand the thoughts and feelings of those who enter it. Unlike a paladin aura which offers benefits to your allies, this aura allows you to use your empath features, and functions more like your effective range. You know the location and emotional state of creatures are within range of your aura. Creatures are considered to be within your aura as long as they:</p><ul><li>Are not constructs</li><li>Are not behind full cover</li><li>Do not have resistance or immunity to psychic damage</li><li>Have an Intelligence score higher than 1</li></ul><p>Your aura is an emanation starting at 30 ft. The range of this emanation increases when you reach certain empath levels, as shown in the Empath table. Empaths cannot benefit from this class feature if they have natural armor or are wearing armor, as it prevents their aura from expanding.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-aura",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 1,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 1",
+    "properties": [],
+    "activities": {
+      "531f630dd491dd63": {
+        "_id": "531f630dd491dd63",
+        "type": "utility",
+        "name": "Open Empath Manager",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "manager"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "aura",
+      "icon": "base",
+      "level": 1
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!6d7c0eb420852d2e"
+}

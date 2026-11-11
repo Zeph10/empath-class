@@ -1,0 +1,103 @@
+{
+  "_id": "6b72659e204480f7",
+  "name": "Empowered Aura",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>The Icon of the Crowds is born of breathtaking public spectacles. Inspire your allies and sap your enemies with auras of empathic power.</p><p>At 3rd level, you can use your aura to empower allies or weaken enemies within it by exploiting the link to your target. You can activate one empowered aura per active link. All auras require an action to activate, and they end if the link which paid for their cost breaks.</p><p><strong>Sustain:</strong> Some auras require you to sustain them, or they end. You pay the sustain cost at the beginning of your turn. If you sustain an aura, you cannot use an action other than an empath class ability.</p><p><strong>Check:</strong> Some auras can only be activated if you have a certain condition met.</p><p><strong>Energize:</strong> Energize effects give additional benefits if you expend additional link depth. You may do so at any time as a free action. If you choose to do so, they gain an additional effect as described in each empowered aura.</p><p>You begin with the following empowered auras: Valor and Trepidation.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-empowered",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 3,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 3; Icon of the Crowds",
+    "properties": [],
+    "activities": {
+      "5a818ea1069b9f3a": {
+        "_id": "5a818ea1069b9f3a",
+        "type": "utility",
+        "name": "Open Empath Manager",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "manager"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "empowered",
+      "icon": "crowds",
+      "level": 3
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!6b72659e204480f7"
+}

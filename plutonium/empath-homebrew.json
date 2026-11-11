@@ -1,0 +1,2620 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "EmpathAxis",
+				"abbreviation": "EMP",
+				"full": "Empath (Axis & Ghostwheel)",
+				"url": "https://dnd-wiki.org/wiki/Empath_(5e_Class)",
+				"authors": [
+					"Axis",
+					"Ghostwheel"
+				],
+				"convertedBy": [
+					"Empath — Links & Icons Foundry module"
+				],
+				"version": "1.6.1",
+				"color": "5c348f"
+			}
+		],
+		"edition": "one",
+		"dateAdded": 1790000000,
+		"dateLastModified": 1790000000
+	},
+	"class": [
+		{
+			"name": "Empath",
+			"source": "EmpathAxis",
+			"edition": "one",
+			"hd": {
+				"number": 1,
+				"faces": 6
+			},
+			"proficiency": [
+				"wis",
+				"cha"
+			],
+			"primaryAbility": [
+				{
+					"wis": true,
+					"cha": true
+				}
+			],
+			"startingProficiencies": {
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"animal handling",
+								"deception",
+								"insight",
+								"intimidation",
+								"perception",
+								"performance",
+								"persuasion"
+							],
+							"count": 2
+						}
+					}
+				],
+				"tools": [
+					"{@item Disguise Kit|XPHB}"
+				],
+				"toolProficiencies": [
+					{
+						"disguise kit": true
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a quarterstaff, (b) an improvised sling and 20 rocks, or (c) a kitchen knife",
+					"(a) a diplomat’s pack, (b) an entertainer’s pack, or (c) an explorer’s pack",
+					"A {@item Disguise Kit|XPHB}"
+				]
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"Aura",
+						"Max Links"
+					],
+					"rows": [
+						[
+							"30 ft.",
+							1
+						],
+						[
+							"30 ft.",
+							1
+						],
+						[
+							"30 ft.",
+							1
+						],
+						[
+							"35 ft.",
+							1
+						],
+						[
+							"35 ft.",
+							2
+						],
+						[
+							"35 ft.",
+							2
+						],
+						[
+							"40 ft.",
+							2
+						],
+						[
+							"40 ft.",
+							2
+						],
+						[
+							"40 ft.",
+							2
+						],
+						[
+							"45 ft.",
+							3
+						],
+						[
+							"45 ft.",
+							3
+						],
+						[
+							"45 ft.",
+							3
+						],
+						[
+							"50 ft.",
+							3
+						],
+						[
+							"50 ft.",
+							3
+						],
+						[
+							"50 ft.",
+							3
+						],
+						[
+							"55 ft.",
+							3
+						],
+						[
+							"55 ft.",
+							3
+						],
+						[
+							"55 ft.",
+							3
+						],
+						[
+							"60 ft.",
+							3
+						],
+						[
+							"60 ft.",
+							"PB"
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Aura|Empath|EmpathAxis|1",
+				"Link|Empath|EmpathAxis|1",
+				"The Right Place at the Right Time|Empath|EmpathAxis|1",
+				"Mood Manipulation|Empath|EmpathAxis|1",
+				"Apathy|Empath|EmpathAxis|1",
+				"Fervor|Empath|EmpathAxis|1",
+				"Link Depth|Empath|EmpathAxis|2",
+				"Pain Resonance|Empath|EmpathAxis|2",
+				"Inspirational Mantle|Empath|EmpathAxis|2",
+				{
+					"classFeature": "Iconic Nature|Empath|EmpathAxis|3",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Empath|EmpathAxis|4",
+				"Insidious Influence|Empath|EmpathAxis|5",
+				"Imprint Affect|Empath|EmpathAxis|6",
+				"Lingering Link|Empath|EmpathAxis|7",
+				"Ability Score Improvement|Empath|EmpathAxis|8",
+				{
+					"classFeature": "Icon Feature|Empath|EmpathAxis|9",
+					"gainSubclassFeature": true
+				},
+				"Extra Link|Empath|EmpathAxis|10",
+				"Improved Empathy|Empath|EmpathAxis|11",
+				"Ability Score Improvement|Empath|EmpathAxis|12",
+				{
+					"classFeature": "Icon Feature|Empath|EmpathAxis|13",
+					"gainSubclassFeature": true
+				},
+				"Heart to Heart|Empath|EmpathAxis|14",
+				"Cloud Mind|Empath|EmpathAxis|15",
+				"Ability Score Improvement|Empath|EmpathAxis|16",
+				{
+					"classFeature": "Icon Feature|Empath|EmpathAxis|17",
+					"gainSubclassFeature": true
+				},
+				"Trauma Dump|Empath|EmpathAxis|18",
+				"Ability Score Improvement|Empath|EmpathAxis|19",
+				"Share Your World|Empath|EmpathAxis|20"
+			],
+			"subclassTitle": "Icon"
+		}
+	],
+	"foundryClass": [
+		{
+			"name": "Empath",
+			"source": "EmpathAxis",
+			"identifier": "empath",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "class"
+				}
+			},
+			"advancement": [
+				{
+					"type": "ScaleValue",
+					"title": "Aura Range",
+					"configuration": {
+						"identifier": "aura",
+						"type": "distance",
+						"distance": {
+							"units": "ft"
+						},
+						"scale": {
+							"1": {
+								"value": 30
+							},
+							"4": {
+								"value": 35
+							},
+							"7": {
+								"value": 40
+							},
+							"10": {
+								"value": 45
+							},
+							"13": {
+								"value": 50
+							},
+							"16": {
+								"value": 55
+							},
+							"19": {
+								"value": 60
+							}
+						}
+					}
+				}
+			]
+		}
+	],
+	"subclass": [
+		{
+			"name": "Icon of Sorcery",
+			"shortName": "Sorcery",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassFeatures": [
+				"Spellcasting|Empath|EmpathAxis|Sorcery|EmpathAxis|3",
+				"Body Fuel|Empath|EmpathAxis|Sorcery|EmpathAxis|9",
+				"Meeting of Minds|Empath|EmpathAxis|Sorcery|EmpathAxis|13",
+				"Aura Max|Empath|EmpathAxis|Sorcery|EmpathAxis|17"
+			]
+		},
+		{
+			"name": "Icon of Terror",
+			"shortName": "Terror",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassFeatures": [
+				"Fearmonger|Empath|EmpathAxis|Terror|EmpathAxis|3",
+				"Widespread Fear|Empath|EmpathAxis|Terror|EmpathAxis|9",
+				"Challenge Heart|Empath|EmpathAxis|Terror|EmpathAxis|13",
+				"Crisis of Life|Empath|EmpathAxis|Terror|EmpathAxis|17"
+			]
+		},
+		{
+			"name": "Icon of the Crowds",
+			"shortName": "Crowds",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassFeatures": [
+				"Empowered Aura|Empath|EmpathAxis|Crowds|EmpathAxis|3",
+				"Manifest Aura|Empath|EmpathAxis|Crowds|EmpathAxis|9",
+				"Materialize Aura|Empath|EmpathAxis|Crowds|EmpathAxis|13",
+				"Incarnate Aura|Empath|EmpathAxis|Crowds|EmpathAxis|17"
+			]
+		}
+	],
+	"foundrySubclass": [
+		{
+			"name": "Icon of Sorcery",
+			"shortName": "Sorcery",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"identifier": "icon-of-sorcery",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "sorcery"
+				}
+			}
+		},
+		{
+			"name": "Icon of Terror",
+			"shortName": "Terror",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"identifier": "icon-of-terror",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "terror"
+				}
+			}
+		},
+		{
+			"name": "Icon of the Crowds",
+			"shortName": "Crowds",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"identifier": "icon-of-the-crowds",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "crowds"
+				}
+			}
+		}
+	],
+	"classFeature": [
+		{
+			"name": "Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"entries": [
+				"At 1st level you have an aura that enables you to understand the thoughts and feelings of those who enter it. Unlike a paladin aura which offers benefits to your allies, this aura allows you to use your empath features, and functions more like your effective range. You know the location and emotional state of creatures are within range of your aura. Creatures are considered to be within your aura as long as they:",
+				{
+					"type": "list",
+					"items": [
+						"Are not constructs",
+						"Are not behind full cover",
+						"Do not have resistance or immunity to psychic damage",
+						"Have an Intelligence score higher than 1"
+					]
+				},
+				"Your aura is an emanation starting at 30 ft. The range of this emanation increases when you reach certain empath levels, as shown in the Empath table. Empaths cannot benefit from this class feature if they have natural armor or are wearing armor, as it prevents their aura from expanding."
+			]
+		},
+		{
+			"name": "Link",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"entries": [
+				"Beginning at 1st level, you are able to deepen your empathic connection to creatures within your aura. While a creature is in your aura you can form a link with it as a bonus action. Your link cannot be ended voluntarily; instead, the link breaks if the target leaves the range of your aura at any time. While you are linked to a creature you cannot concentrate on a spell. A linked creature can feel what the empath feels and vise versa.",
+				"Either you or the linked creature can spend an action to attempt to dig deeper by making a Wisdom (Insight) ability check contested against the other creature's Charisma (Deception) ability check. On a success, you can read the creature's surface-level thoughts and gain insight into the creature's reasoning (if any) and something that looms large in its mind (such as something it worries over, loves, or hates). A creature who succeeds on their Charisma (Deception) check is immune to further attempts to probe deeper using this ability until they finish a long rest.",
+				"Some of your class features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows:",
+				{
+					"type": "entries",
+					"name": "Empath save DC",
+					"entries": [
+						"8 + your proficiency bonus + your Wisdom modifier"
+					]
+				}
+			]
+		},
+		{
+			"name": "The Right Place at the Right Time",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"entries": [
+				"You may spend a reaction if a linked creature moves. As part of that reaction, you may move five feet each time the linked creature moves five feet, but no more total distance than your speed. You regain this reaction at the end of the creature's turn."
+			]
+		},
+		{
+			"name": "Mood Manipulation",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"entries": [
+				"Starting at 1st level, you can manipulate the emotions of those you are linked to in profound ways. You gain the use of the following mood manipulations: Apathy and Fervor."
+			]
+		},
+		{
+			"name": "Apathy",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"entries": [
+				"You may attempt to thwart a linked foe's attempts at aggression. By spending an action, you may force a linked creature to make a Wisdom saving throw. On a failed save, their next instance of damage dealt is reduced by 1d4 + your Charisma modifier and they are unable to critically hit while under this effect. Upon reaching 5th, 11th, and 17th levels, increase the amount of damage reduced by an additional 1d4. This effect can stack with other instances of Apathy."
+			]
+		},
+		{
+			"name": "Fervor",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"entries": [
+				"You may attempt to inspire your linked ally to perform at their best. By spending an action, you can cause their next weapon attack before the start of your next turn to be made at advantage. In addition, their first successful weapon attack before the start of your next turn deals additional damage equal to your Charisma modifier. Upon reaching 5th, 11th, and 17th levels, also expand the ally's critical hit range by 1. (This stacks with effects that expand your critical hit rate)"
+			]
+		},
+		{
+			"name": "Link Depth",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 2,
+			"entries": [
+				"Upon reaching 2nd level, you gain the ability to store empathic energy within the bonds you share with friend or foe. Whenever a linked target ends its turn, you may force it to make a Wisdom saving throw. On a failed save, the link depth for their link is increased by one as long as they are a worthy foe. A creature may choose to fail their saving throw if they wish. This power can be used to empower your empath abilities and describes the intensity of your emotional connection.",
+				"All link depth is lost when the link is broken. The maximum depth you can accrue on a target is equal to your Charisma modifier (minimum one). Whenever link depth is expended, a display occurs which signals a supernatural event. Examples of displays can be auditory (such as bass-pitched hum), material (such as the target or an area briefly being slicked with translucent gel which shortly disappears), mental (such as a subtle chime ringing in the minds of those nearby), olfactory (such as an odd but familiar odor bringing to mind a brief mental flash of a long-buried memory), or visual (such as the empath's eyes glowing like points of silver fire). Regardless, it is clear that the empath is the source of this supernatural event.",
+				"You gain the following mood manipulations: Pain Resonance and Inspirational Mantle."
+			]
+		},
+		{
+			"name": "Pain Resonance",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 2,
+			"entries": [
+				"As an action, expend link depth to deal 2d6 psychic damage to the linked foe per link depth. The size of the die of damage from this feature increases at levels 5 to a d8, at 11 to a d10, and at 17 to a d12. Starting at fifth level, the dice are doubled if pain resonance is used at touch range."
+			]
+		},
+		{
+			"name": "Inspirational Mantle",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 2,
+			"entries": [
+				"As an action, expend one link depth to increase your ally's attack bonus by one for one turn. You may expend addition link depth to extend the duration of this ability for an additional round per link depth. If your link is broken, the effect of Inspirational Mantle ends. Increase the bonus by one at 9th and 17th levels (up to a maximum of +3). At fifth level, also expand the critical hit range by the attack bonus granted by this feature."
+			]
+		},
+		{
+			"name": "Iconic Nature",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"As you reach 3rd level, you determine the nature of your Icon. Choose one of the following icons: Icon of Sorcery, Icon of Terror, or Icon of the Crowds, all detailed at the end of the class description. Your icon grants you features at 3rd level, and again at 9th, 13th, and 17th level."
+			]
+		},
+		{
+			"name": "Insidious Influence",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 5,
+			"entries": [
+				"At 5th level, you gain the ability to form an additional link, increasing the number you can have active at once to two. However, one of the two links must be made to a hostile creature."
+			]
+		},
+		{
+			"name": "Imprint Affect",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 6,
+			"entries": [
+				"At 6th level you can spend an action to infuse something you or one of your links feels into an object you are touching. Any creature that touches the object may feel this emotion. The emotion is limited in intensity and typically has no lasting effects."
+			]
+		},
+		{
+			"name": "Lingering Link",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 7,
+			"entries": [
+				"At 7th level, your links are durable enough to survive briefly being severed from your aura. If a creature would leave your aura, you may treat the creature as if it were still in your aura or allow the link to break. If you treat the creature as if it were in your aura, then you must end your turn with the creature in your aura, or the link breaks."
+			]
+		},
+		{
+			"name": "Extra Link",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 10,
+			"entries": [
+				"Starting at 10th level, you can use a bonus action to form an additional link, increasing the number you can have active at once to three. At least one of the three links you form is limited to a hostile creature."
+			]
+		},
+		{
+			"name": "Improved Empathy",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 11,
+			"entries": [
+				"At 11th level, whenever your link would gain link depth, it gains an additional link depth, and your maximum capacity of link depth per link is doubled."
+			]
+		},
+		{
+			"name": "Heart to Heart",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 14,
+			"entries": [
+				"Starting at 14th level, you may speak telepathically with any creature within your aura allowing you to understand each other as long as they know at least one language."
+			]
+		},
+		{
+			"name": "Cloud Mind",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 15,
+			"entries": [
+				"Beginning at 15th level, you can cause others to become unaware of your existence. Once per short rest, you may force all creatures within range of your aura to make a Wisdom saving throw, or else you become Hidden to them. If you activate any class features, cast a spell, activate a magic item or make an attack, this effect automatically ends, and if you interact with the environment in a noticeable way, they may attempt the saving throw once more. This effect lasts for ten minutes, or until you end your turn with them outside your aura."
+			]
+		},
+		{
+			"name": "Trauma Dump",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 18,
+			"entries": [
+				"Starting at 18th level, you can open yourself to the psychic emanations of others and take on some of their wounds to allow them to recuperate from the scars events have left on them. You can replicate the effects of greater restoration on a target if you are in contact with them for ten minutes and you are both staying still."
+			]
+		},
+		{
+			"name": "Share Your World",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 20,
+			"entries": [
+				"At 20th level, you may have a number of links equal to your proficiency bonus."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 4,
+			"entries": [
+				"Upon reaching 4th level and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or two ability scores of your choice by 1. You can't increase your ability score above 20 using this feature."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 8,
+			"entries": [
+				"Upon reaching 4th level and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or two ability scores of your choice by 1. You can't increase your ability score above 20 using this feature."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 12,
+			"entries": [
+				"Upon reaching 4th level and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or two ability scores of your choice by 1. You can't increase your ability score above 20 using this feature."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 16,
+			"entries": [
+				"Upon reaching 4th level and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or two ability scores of your choice by 1. You can't increase your ability score above 20 using this feature."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 19,
+			"entries": [
+				"Upon reaching 4th level and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or two ability scores of your choice by 1. You can't increase your ability score above 20 using this feature."
+			]
+		},
+		{
+			"name": "Icon Feature",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 9,
+			"entries": [
+				"You gain a feature from your Icon."
+			]
+		},
+		{
+			"name": "Icon Feature",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 13,
+			"entries": [
+				"You gain a feature from your Icon."
+			]
+		},
+		{
+			"name": "Icon Feature",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 17,
+			"entries": [
+				"You gain a feature from your Icon."
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Spellcasting",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"An Icon of Sorcery may form in response to profound displays of magical power. Those with this icon are able to convert emotions into magical power.",
+				"When you reach 3rd level, you gain spellcasting.",
+				{
+					"type": "entries",
+					"name": "Casting Empath Spells",
+					"entries": [
+						"Empaths do not cast spells using spell slots and instead expend link depth. When you cast a spell, first select which of your active links will cast the spell and the linked creature associated with that link. The spell must include either yourself or that creature, and the link must have at least one link depth if it casting a leveled spell. The spell originates either from your space or that creature's space. Expend link depth equal to twice the spell level from any active links, hostile links count double."
+					]
+				},
+				"When you cast a spell gained from this subclass with a duration of more than one round, the spell ends if the link designated for the casting breaks. You can only cast empath spells in this way even if you know spells from another class or feature.",
+				{
+					"type": "entries",
+					"name": "Cantrips",
+					"entries": [
+						"You learn two cantrips of your choice from the icon of sorcery spell list (found at the end of this subclass). You learn an additional cantrip of your choice at 10th level. 0 linked depth is needed to cast a cantrip."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Leveled Spells",
+					"entries": [
+						"You know two 1st-level icon of sorcery spells of your choice from the icon of sorcery spell list (shown at the end of this subclass)."
+					]
+				},
+				"The Spells Known column of the Icon of Sorcery Spellcasting table shows when you learn more leveled spells. A spell you choose must be of a level no higher than what's shown in the table's Maximum Spell Level column for your level. For example, at level ten you can learn a spell of 1st, 2nd, or 3rd level, and 3 is the highest level you can upcast your spells.",
+				"Whenever you gain a level in this class, you can replace one of the icon of sorcery spells you know with another spell of your choice from the icon of sorcery spell list. The new spell must be of a level no higher than what's shown in the table's Maximum Spell Level column for your level.",
+				{
+					"type": "entries",
+					"name": "Spellcasting Ability",
+					"entries": [
+						"Wisdom is your spellcasting ability for your icon of sorcery spells."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spell save DC",
+					"entries": [
+						"8 + your proficiency bonus + your Wisdom modifier"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spell attack modifier",
+					"entries": [
+						"your proficiency bonus + your Wisdom modifier"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spells and Concentration",
+					"entries": [
+						"Empaths do not concentrate on spells in the traditional way. Instead, they designate a link to hold their concentration when they cast a spell, each of which can concentrate on a single spell. If the link breaks, they are considered to have lost concentration, and the spell ends. They cannot lose concentration by taking damage."
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Icon of Sorcery Spellcasting",
+					"colLabels": [
+						"Icon of Sorcery Level",
+						"Cantrips Known",
+						"Spells Known",
+						"Maximum Spell Level"
+					],
+					"rows": [
+						[
+							"3rd",
+							"2",
+							"2",
+							"1"
+						],
+						[
+							"4th",
+							"2",
+							"2",
+							"1"
+						],
+						[
+							"5th",
+							"2",
+							"3",
+							"2"
+						],
+						[
+							"6th",
+							"2",
+							"3",
+							"2"
+						],
+						[
+							"7th",
+							"2",
+							"4",
+							"2"
+						],
+						[
+							"8th",
+							"3",
+							"4",
+							"2"
+						],
+						[
+							"9th",
+							"3",
+							"5",
+							"3"
+						],
+						[
+							"10th",
+							"3",
+							"5",
+							"3"
+						],
+						[
+							"11th",
+							"3",
+							"6",
+							"3"
+						],
+						[
+							"12th",
+							"3",
+							"6",
+							"3"
+						],
+						[
+							"13th",
+							"3",
+							"7",
+							"4"
+						],
+						[
+							"14th",
+							"3",
+							"7",
+							"4"
+						],
+						[
+							"15th",
+							"3",
+							"8",
+							"4"
+						],
+						[
+							"16th",
+							"3",
+							"8",
+							"4"
+						],
+						[
+							"17th",
+							"3",
+							"9",
+							"5"
+						],
+						[
+							"18th",
+							"3",
+							"9",
+							"5"
+						],
+						[
+							"19th",
+							"3",
+							"10",
+							"5"
+						],
+						[
+							"20th",
+							"4",
+							"10",
+							"5"
+						]
+					]
+				},
+				"{@i Module note: The cantrip text (additional cantrip at 10th level) and the table (3 at 8th, 4 at 20th) disagree; the module follows the table.}",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Focused Bond|Empath|EmpathAxis|Sorcery|EmpathAxis|3"
+				}
+			]
+		},
+		{
+			"name": "Focused Bond",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"Starting at 3rd level, you learn to cast magic through your connections with others. You may replace the range of a spell with \"a linked target(s)\". If you do so and it has a range of self, the target must be willing."
+			]
+		},
+		{
+			"name": "Body Fuel",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"entries": [
+				"Upon reaching 9th level, you gain the ability to convert pain into empathic energy. You can reduce the amount of link depth required to cast a spell by half (minimum 0), but take 1d6 psychic damage for each depth reduced. The damage taken from this feature cannot be reduced in any way."
+			]
+		},
+		{
+			"name": "Meeting of Minds",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"entries": [
+				"Starting at 13th level, as a reaction when an ally you are linked with successfully lands a weapon attack, you may transfer the link and all link depth attached to that link to the target of the weapon attack. You can use this ability once and regain its use at the end of a short or long rest. If you do so, you are unable to use mood manipulations until the end of your next turn."
+			]
+		},
+		{
+			"name": "Aura Max",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"entries": [
+				"Having reached 17th level, your aura can become a conduit. Replace the target of a spell with \"any number of target creatures within your aura.\" If you do so and it has a range of self, each target must be willing.",
+				"You can use this ability once and regain the ability to use it at the end of a long rest."
+			]
+		},
+		{
+			"name": "Fearmonger",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"The Icon of Terror is born from a large group of people witnessing something horrific. Those who bear this power can manipulate the deepest fears of those unlucky enough to enter their aura.",
+				"Starting at 3rd level, the way you interact with others through your links changes. Creatures that are immune to the frightened condition cannot be linked to. Creatures that gain advantage on saving throws against frightened have advantage on the saving throw to resist increasing their link's depth. However, creatures that have neither have disadvantage on saving throws to resist increasing their link's depth.",
+				"In addition, the following mood manipulations: Fear of Disappointment and Terrorize.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fear of Disappointment|Empath|EmpathAxis|Terror|EmpathAxis|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Terrorize|Empath|EmpathAxis|Terror|EmpathAxis|3"
+				}
+			]
+		},
+		{
+			"name": "Fear of Disappointment",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"The weight of expectation causes your allies to perform. You can spend an action and expend 1 link depth from the link of a linked creature to grant them advantage on all attacks until the start of your next turn. You can spend additional link depth when activating this feature; if you do, the linked creature also deals additional psychic damage on attacks equal to twice the number of additional link depth expended. If they attack a linked creature the additional damage is quadrupled instead."
+			]
+		},
+		{
+			"name": "Terrorize",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"Fear sparks within the heart of your enemies, causing them to lose their nerve. You can spend an action and expend one link depth from the link of a linked creature to cause that creature to become frightened of you. You are immune to all damage originating from the creature while they are frightened in this way. They can end the condition at the start of their turn by ending their turn, or by passing a wisdom saving throw at the end of their turn after taking their turn normally."
+			]
+		},
+		{
+			"name": "Widespread Fear",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"entries": [
+				"By 9th level, your fearsome aura seeps deeply into the psyche of those who stand against you. A creature with immunity to fear instead has advantage on saves against your empath abilities. A creature who has advantage against being frightened does not benefit from that feature.",
+				"In addition, you gain the following mood manipulations: Fear of Missing Out and Intrusive Thoughts.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fear of Missing Out|Empath|EmpathAxis|Terror|EmpathAxis|9"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Intrusive Thoughts|Empath|EmpathAxis|Terror|EmpathAxis|9"
+				}
+			]
+		},
+		{
+			"name": "Fear of Missing Out",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"entries": [
+				"You must allow your allies to join in making the world know fear. You can spend your action to expend two link depth from the link of a linked ally to empower their next successful attack roll. On a successful attack, all creatures within 15 feet of the target must pass a wisdom save or become frightened. This effect ends if your link breaks."
+			]
+		},
+		{
+			"name": "Intrusive Thoughts",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"entries": [
+				"Summon forth forbidden thoughts for your enemies to act upon. You can spend your action to expend three link depth from the link of a linked foe to force them spend their next bonus action to make a weapon attack at advantage against a target of your choice at any point during their turn. If this attack hits, the attacked creature becomes frightened of your linked target until they leave your aura. This attack does not suffer from disadvantage due to being frightened."
+			]
+		},
+		{
+			"name": "Challenge Heart",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"entries": [
+				"Starting at 13th level, frightened creatures cannot willing leave your aura. Additionally, you gain the following mood manipulations: Fear of Failure and Jump Scare.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fear of Failure|Empath|EmpathAxis|Terror|EmpathAxis|13"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Jump Scare|Empath|EmpathAxis|Terror|EmpathAxis|13"
+				}
+			]
+		},
+		{
+			"name": "Fear of Failure",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"entries": [
+				"Summon forth the strength born of the desperation to succeed. When a linked ally makes a successful attack against an enemy, you can spend your reaction and expend six link depth from their link to force them to reroll that attack without advantage or disadvantage. On a successful hit, the original attack is instead a critical hit and deals an additional 40 psychic damage."
+			]
+		},
+		{
+			"name": "Jump Scare",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"entries": [
+				"A sudden jet of emotion causes your allies to suddenly act. If it is a linked foe's turn and they are frightened, you can spend a reaction and expend three link depth to allow an ally to immediately act as if it was their turn. During this extra turn, the selected ally has advantage on attack and damage rolls against the creature whose turn they interrupted and cannot willingly leave your aura. The linked creature resumes their turn after this extra turn concludes, and the selected ally skips their next turn."
+			]
+		},
+		{
+			"name": "Crisis of Life",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"entries": [
+				"Upon reaching 17th level, you gain the following mood manipulations: Fear of Death and Fear's End.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fear of Death|Empath|EmpathAxis|Terror|EmpathAxis|17"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fear’s End|Empath|EmpathAxis|Terror|EmpathAxis|17"
+				}
+			]
+		},
+		{
+			"name": "Fear of Death",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"entries": [
+				"Your fears manifest physically, forcing your foes to relive their pain. You can spend eight link depth from the link of an allied creature as an action to cause all damage they do until the start of your next turn to be doubled. Additionally, you may move any amount of link depth from hostile links to this link and take another action."
+			]
+		},
+		{
+			"name": "Fear’s End",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"entries": [
+				"A terror so deep that it grows into hopelessness. You can spend an action to expend six link depth from the link of a linked foe to force them to make a Wisdom saving throw. On a failed save, they must spend their action making a weapon attack against themselves at advantage using their most powerful attack. This attack does not suffer from disadvantage due to being frightened. On a successful hit, the attack does critical damage and the target takes 100 psychic damage. On a successful saving throw, the target takes 50 psychic damage."
+			]
+		},
+		{
+			"name": "Empowered Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"The Icon of the Crowds is born of breathtaking public spectacles. Inspire your allies and sap your enemies with auras of empathic power.",
+				"At 3rd level, you can use your aura to empower allies or weaken enemies within it by exploiting the link to your target. You can activate one empowered aura per active link. All auras require an action to activate, and they end if the link which paid for their cost breaks.",
+				{
+					"type": "entries",
+					"name": "Sustain",
+					"entries": [
+						"Some auras require you to sustain them, or they end. You pay the sustain cost at the beginning of your turn. If you sustain an aura, you cannot use an action other than an empath class ability."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Check",
+					"entries": [
+						"Some auras can only be activated if you have a certain condition met."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"Energize effects give additional benefits if you expend additional link depth. You may do so at any time as a free action. If you choose to do so, they gain an additional effect as described in each empowered aura."
+					]
+				},
+				"You begin with the following empowered auras: Valor and Trepidation.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Valor|Empath|EmpathAxis|Crowds|EmpathAxis|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Trepidation|Empath|EmpathAxis|Crowds|EmpathAxis|3"
+				}
+			]
+		},
+		{
+			"name": "Valor",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"Expend two link depth on an ally. Whenever an ally makes an ability check, the target can roll a d4 and add the number rolled to the ability check. This lasts for one minute, or until your link breaks.",
+				{
+					"type": "entries",
+					"name": "Sustain",
+					"entries": [
+						"one link depth."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"Expend one link depth. Until Valor ends, also add the d4 to attack rolls and saves."
+					]
+				}
+			]
+		},
+		{
+			"name": "Trepidation",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"entries": [
+				"Expend one link depth on an enemy. All enemies suffer the following effect: When a hostile creature in the aura makes an attack roll or a saving throw, the target must roll a d4 and subtract the number rolled to the attack roll or saving throw. This lasts for one minute, or until your link breaks.",
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"Expend one link depth. Until Trepidation ends, roll the d4 at advantage."
+					]
+				}
+			]
+		},
+		{
+			"name": "Manifest Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"entries": [
+				"Beginning at 9th level, you gain access to two new auras: Turbulence and Violence.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Turbulence|Empath|EmpathAxis|Crowds|EmpathAxis|9"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Violence|Empath|EmpathAxis|Crowds|EmpathAxis|9"
+				}
+			]
+		},
+		{
+			"name": "Turbulence",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"entries": [
+				"Expend two link depth on an allied link. All allies within your aura gain the following ability:",
+				"When an enemy that is farther than 15 feet away from you makes a ranged weapon attack against you, you may expend your reaction to force that enemy to make a Wisdom saving throw. On a failed save, that attack and all future ranged weapon attacks made by that creature against you automatically miss until the start of its next turn. This lasts for one minute, or until your link breaks.",
+				{
+					"type": "entries",
+					"name": "Sustain",
+					"entries": [
+						"two link depth."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"Expend one link depth. Until turbulence ends, even creatures within 15 feet of you are affected by this aura."
+					]
+				}
+			]
+		},
+		{
+			"name": "Violence",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"entries": [
+				"Expend two link depth on an enemy link. Each hostile creature who starts or willingly moves into the range of your aura makes a Wisdom saving throw. They take 3d8 psychic damage on a failed save. This lasts for one minute, or until your link breaks.",
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"Spend two link depth to increase the damage dealt to hostile creatures by 1d8. This can be used any number of times until Violence ends."
+					]
+				}
+			]
+		},
+		{
+			"name": "Materialize Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"entries": [
+				"At 13th level, you gain access to two new auras: Excitement and Fatigue.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Excitement|Empath|EmpathAxis|Crowds|EmpathAxis|13"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fatigue|Empath|EmpathAxis|Crowds|EmpathAxis|13"
+				}
+			]
+		},
+		{
+			"name": "Excitement",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Check",
+					"entries": [
+						"six link depth on an ally. You gain an additional action on each of your turns. That action can be used only to take the Dash, Disengage, Hide, or Utilize action. This lasts for one minute, or until your link breaks."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sustain",
+					"entries": [
+						"Two link depth."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"Expend two link depth. Allies can choose an additional action they did not already choose until excitement ends."
+					]
+				}
+			]
+		},
+		{
+			"name": "Fatigue",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Check",
+					"entries": [
+						"four link depth on an enemy. Enemies consider your aura to be difficult terrain. This lasts for one minute, or until your link breaks."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"You may spend two additional link depth when initiating this aura to cause the difficult terrain to only allow enemies to 1 foot for every 3 feet they would move until Fatigue ends."
+					]
+				}
+			]
+		},
+		{
+			"name": "Incarnate Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"entries": [
+				"At 17th level, you gain access to two new auras: Vigilance and Trouble.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Vigilance|Empath|EmpathAxis|Crowds|EmpathAxis|17"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Trouble|Empath|EmpathAxis|Crowds|EmpathAxis|17"
+				}
+			]
+		},
+		{
+			"name": "Vigilance",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Check",
+					"entries": [
+						"eight link depth on allies. Allies within vigilance have advantage on saving throws against spells and other magical effects. This lasts for one minute, or until your link breaks."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sustain",
+					"entries": [
+						"three link depth."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"Expend two link depth. Until Vigilance ends, spells have no effect on a successful save."
+					]
+				}
+			]
+		},
+		{
+			"name": "Trouble",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Check",
+					"entries": [
+						"eight link depth on enemies. Hostile creatures that enter the aura cannot leave its area. This lasts for one minute, or until your link breaks."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sustain",
+					"entries": [
+						"two link depth."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Energize",
+					"entries": [
+						"Expend two link depth. Until Trouble ends, hostile creatures also cannot enter your aura."
+					]
+				}
+			]
+		}
+	],
+	"foundryClassFeature": [
+		{
+			"name": "Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"identifier": "empath-aura",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "aura",
+					"icon": "base",
+					"level": 1
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Link",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"identifier": "empath-link",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "link",
+					"icon": "base",
+					"level": 1
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Link",
+					"activation": {
+						"type": "bonus"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "link"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "The Right Place at the Right Time",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"identifier": "empath-follow",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "follow",
+					"icon": "base",
+					"level": 1
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "The Right Place at the Right Time",
+					"activation": {
+						"type": "reaction"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "follow"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Mood Manipulation",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"identifier": "empath-mood",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "mood",
+					"icon": "base",
+					"level": 1
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Apathy",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"identifier": "empath-apathy",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "apathy",
+					"icon": "base",
+					"level": 1
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Apathy",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "apathy"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Fervor",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 1,
+			"identifier": "empath-fervor",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "fervor",
+					"icon": "base",
+					"level": 1
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Fervor",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "fervor"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Link Depth",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 2,
+			"identifier": "empath-depth",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "depth",
+					"icon": "base",
+					"level": 2
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Pain Resonance",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 2,
+			"identifier": "empath-pain",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "pain",
+					"icon": "base",
+					"level": 2
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Pain Resonance",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "pain"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Inspirational Mantle",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 2,
+			"identifier": "empath-mantle",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "mantle",
+					"icon": "base",
+					"level": 2
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Inspirational Mantle",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "mantle"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Iconic Nature",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-icon",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "icon",
+					"icon": "base",
+					"level": 3
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Insidious Influence",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 5,
+			"identifier": "empath-influence",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "influence",
+					"icon": "base",
+					"level": 5
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Imprint Affect",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 6,
+			"identifier": "empath-imprint",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "imprint",
+					"icon": "base",
+					"level": 6
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Imprint Affect",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "imprint"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Lingering Link",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 7,
+			"identifier": "empath-linger",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "linger",
+					"icon": "base",
+					"level": 7
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Extra Link",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 10,
+			"identifier": "empath-extra",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "extra",
+					"icon": "base",
+					"level": 10
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Improved Empathy",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 11,
+			"identifier": "empath-improved",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "improved",
+					"icon": "base",
+					"level": 11
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Heart to Heart",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 14,
+			"identifier": "empath-heart",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "heart",
+					"icon": "base",
+					"level": 14
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Heart to Heart",
+					"activation": {
+						"type": "special"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "heart"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Cloud Mind",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 15,
+			"identifier": "empath-cloud",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "cloud",
+					"icon": "base",
+					"level": 15
+				}
+			},
+			"system": {
+				"uses": {
+					"max": "1",
+					"per": "sr"
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Cloud Mind",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "cloud"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Trauma Dump",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 18,
+			"identifier": "empath-trauma",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "trauma",
+					"icon": "base",
+					"level": 18
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Trauma Dump",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "trauma"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Share Your World",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"level": 20,
+			"identifier": "empath-world",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "world",
+					"icon": "base",
+					"level": 20
+				}
+			},
+			"activities": []
+		}
+	],
+	"foundrySubclassFeature": [
+		{
+			"name": "Spellcasting",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-sorcery",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "sorcery",
+					"icon": "sorcery",
+					"level": 3
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Focused Bond",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-focus",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "focus",
+					"icon": "sorcery",
+					"level": 3
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Body Fuel",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"identifier": "empath-fuel",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "fuel",
+					"icon": "sorcery",
+					"level": 9
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Meeting of Minds",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"identifier": "empath-meeting",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "meeting",
+					"icon": "sorcery",
+					"level": 13
+				}
+			},
+			"system": {
+				"uses": {
+					"max": "1",
+					"per": "sr"
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Meeting of Minds",
+					"activation": {
+						"type": "reaction"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "meeting"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Aura Max",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Sorcery",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"identifier": "empath-max",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "max",
+					"icon": "sorcery",
+					"level": 17
+				}
+			},
+			"system": {
+				"uses": {
+					"max": "1",
+					"per": "lr"
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Fearmonger",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-fearmonger",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "fearmonger",
+					"icon": "terror",
+					"level": 3
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Fear of Disappointment",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-disappointment",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "disappointment",
+					"icon": "terror",
+					"level": 3
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Fear of Disappointment",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "disappointment"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Terrorize",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-terrorize",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "terrorize",
+					"icon": "terror",
+					"level": 3
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Terrorize",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "terrorize"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Widespread Fear",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"identifier": "empath-widespread",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "widespread",
+					"icon": "terror",
+					"level": 9
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Fear of Missing Out",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"identifier": "empath-fomo",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "fomo",
+					"icon": "terror",
+					"level": 9
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Fear of Missing Out",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "fomo"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Intrusive Thoughts",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"identifier": "empath-intrusive",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "intrusive",
+					"icon": "terror",
+					"level": 9
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Intrusive Thoughts",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "intrusive"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Challenge Heart",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"identifier": "empath-challenge",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "challenge",
+					"icon": "terror",
+					"level": 13
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Fear of Failure",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"identifier": "empath-failure",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "failure",
+					"icon": "terror",
+					"level": 13
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Fear of Failure",
+					"activation": {
+						"type": "reaction"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "failure"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Jump Scare",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"identifier": "empath-jump",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "jump",
+					"icon": "terror",
+					"level": 13
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Jump Scare",
+					"activation": {
+						"type": "reaction"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "jump"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Crisis of Life",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"identifier": "empath-crisis",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "crisis",
+					"icon": "terror",
+					"level": 17
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Fear of Death",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"identifier": "empath-death",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "death",
+					"icon": "terror",
+					"level": 17
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Fear of Death",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "death"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Fear’s End",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Terror",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"identifier": "empath-end",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "end",
+					"icon": "terror",
+					"level": 17
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Fear’s End",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "end"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Empowered Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-empowered",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "empowered",
+					"icon": "crowds",
+					"level": 3
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Valor",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-valor",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "valor",
+					"icon": "crowds",
+					"level": 3
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Valor",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "valor"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Trepidation",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 3,
+			"identifier": "empath-trepidation",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "trepidation",
+					"icon": "crowds",
+					"level": 3
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Trepidation",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "trepidation"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Manifest Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"identifier": "empath-manifest",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "manifest",
+					"icon": "crowds",
+					"level": 9
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Turbulence",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"identifier": "empath-turbulence",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "turbulence",
+					"icon": "crowds",
+					"level": 9
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Turbulence",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "turbulence"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Violence",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 9,
+			"identifier": "empath-violence",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "violence",
+					"icon": "crowds",
+					"level": 9
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Violence",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "violence"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Materialize Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"identifier": "empath-materialize",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "materialize",
+					"icon": "crowds",
+					"level": 13
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Excitement",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"identifier": "empath-excitement",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "excitement",
+					"icon": "crowds",
+					"level": 13
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Excitement",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "excitement"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Fatigue",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 13,
+			"identifier": "empath-fatigue",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "fatigue",
+					"icon": "crowds",
+					"level": 13
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Fatigue",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "fatigue"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Incarnate Aura",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"identifier": "empath-incarnate",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "incarnate",
+					"icon": "crowds",
+					"level": 17
+				}
+			},
+			"activities": []
+		},
+		{
+			"name": "Vigilance",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"identifier": "empath-vigilance",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "vigilance",
+					"icon": "crowds",
+					"level": 17
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Vigilance",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "vigilance"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Trouble",
+			"source": "EmpathAxis",
+			"className": "Empath",
+			"classSource": "EmpathAxis",
+			"subclassShortName": "Crowds",
+			"subclassSource": "EmpathAxis",
+			"level": 17,
+			"identifier": "empath-trouble",
+			"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+			"flags": {
+				"empath-class": {
+					"key": "trouble",
+					"icon": "crowds",
+					"level": 17
+				}
+			},
+			"activities": [
+				{
+					"type": "utility",
+					"name": "Trouble",
+					"activation": {
+						"type": "action"
+					},
+					"flags": {
+						"empath-class": {
+							"action": "trouble"
+						}
+					}
+				}
+			]
+		}
+	]
+}

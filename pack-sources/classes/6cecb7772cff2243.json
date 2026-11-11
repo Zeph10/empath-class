@@ -1,0 +1,132 @@
+{
+  "_id": "6cecb7772cff2243",
+  "name": "Icon of the Crowds",
+  "type": "subclass",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Icon of the Crowds. Features at Empath levels 3, 9, 13, and 17.</p><p>@UUID[Compendium.empath-class.features.Item.6b72659e204480f7]{Empowered Aura} (level 3)</p><p>@UUID[Compendium.empath-class.features.Item.6adcc016448d707c]{Valor} (level 3)</p><p>@UUID[Compendium.empath-class.features.Item.019cd0a96f5d148d]{Trepidation} (level 3)</p><p>@UUID[Compendium.empath-class.features.Item.05b3abf2579a5eb6]{Manifest Aura} (level 9)</p><p>@UUID[Compendium.empath-class.features.Item.5800768b32a54c54]{Turbulence} (level 9)</p><p>@UUID[Compendium.empath-class.features.Item.2a6abca4e3345424]{Violence} (level 9)</p><p>@UUID[Compendium.empath-class.features.Item.7ce005155a41089d]{Materialize Aura} (level 13)</p><p>@UUID[Compendium.empath-class.features.Item.80f5846485aa518c]{Excitement} (level 13)</p><p>@UUID[Compendium.empath-class.features.Item.4064e6a9a434b058]{Fatigue} (level 13)</p><p>@UUID[Compendium.empath-class.features.Item.be00973bd0d73fe4]{Incarnate Aura} (level 17)</p><p>@UUID[Compendium.empath-class.features.Item.6077e63824e7f482]{Vigilance} (level 17)</p><p>@UUID[Compendium.empath-class.features.Item.7130df43355ec25b]{Trouble} (level 17)</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "icon-of-the-crowds",
+    "classIdentifier": "empath",
+    "spellcasting": {
+      "progression": "none",
+      "ability": "wis"
+    },
+    "advancement": [
+      {
+        "_id": "0f684a0748d7ac19",
+        "type": "ItemGrant",
+        "level": 3,
+        "title": "Icon of the Crowds",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.6b72659e204480f7",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.6adcc016448d707c",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.019cd0a96f5d148d",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "47ff1fc463fe8fcc",
+        "type": "ItemGrant",
+        "level": 9,
+        "title": "Icon of the Crowds",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.05b3abf2579a5eb6",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.5800768b32a54c54",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.2a6abca4e3345424",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "17c8f7d53b3008ff",
+        "type": "ItemGrant",
+        "level": 13,
+        "title": "Icon of the Crowds",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.7ce005155a41089d",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.80f5846485aa518c",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.4064e6a9a434b058",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "698eff93c66dd035",
+        "type": "ItemGrant",
+        "level": 17,
+        "title": "Icon of the Crowds",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.be00973bd0d73fe4",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.6077e63824e7f482",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.7130df43355ec25b",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "crowds"
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!6cecb7772cff2243"
+}

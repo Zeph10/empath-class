@@ -1,0 +1,103 @@
+{
+  "_id": "16d34b5e7bcb341e",
+  "name": "Fear of Failure",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Summon forth the strength born of the desperation to succeed. When a linked ally makes a successful attack against an enemy, you can spend your reaction and expend six link depth from their link to force them to reroll that attack without advantage or disadvantage. On a successful hit, the original attack is instead a critical hit and deals an additional 40 psychic damage.</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-failure",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 13,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 13; Icon of Terror",
+    "properties": [],
+    "activities": {
+      "5f552a6dc95ec2a8": {
+        "_id": "5f552a6dc95ec2a8",
+        "type": "utility",
+        "name": "Fear of Failure",
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "failure"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "failure",
+      "icon": "terror",
+      "level": 13
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!16d34b5e7bcb341e"
+}

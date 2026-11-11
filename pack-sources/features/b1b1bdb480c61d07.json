@@ -1,0 +1,103 @@
+{
+  "_id": "b1b1bdb480c61d07",
+  "name": "Link",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Beginning at 1st level, you are able to deepen your empathic connection to creatures within your aura. While a creature is in your aura you can form a link with it as a bonus action. Your link cannot be ended voluntarily; instead, the link breaks if the target leaves the range of your aura at any time. While you are linked to a creature you cannot concentrate on a spell. A linked creature can feel what the empath feels and vise versa.</p><p>Either you or the linked creature can spend an action to attempt to dig deeper by making a Wisdom (Insight) ability check contested against the other creature's Charisma (Deception) ability check. On a success, you can read the creature's surface-level thoughts and gain insight into the creature's reasoning (if any) and something that looms large in its mind (such as something it worries over, loves, or hates). A creature who succeeds on their Charisma (Deception) check is immune to further attempts to probe deeper using this ability until they finish a long rest.</p><p>Some of your class features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows:</p><p><strong>Empath save DC =</strong> 8 + your proficiency bonus + your Wisdom modifier</p><p><a href=\"https://dnd-wiki.org/wiki/Empath_(5e_Class)\">Source: Empath by Axis, co-authored by Ghostwheel</a> (CC BY-SA 3.0). See the module's AUTOMATION.md for what is automated and how rules are interpreted.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "empath-link",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": 1,
+      "items": [
+        "class:empath"
+      ],
+      "repeatable": false
+    },
+    "requirements": "Empath 1",
+    "properties": [],
+    "activities": {
+      "c94bd9d6cb08eca0": {
+        "_id": "c94bd9d6cb08eca0",
+        "type": "utility",
+        "name": "Link",
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "targets": [],
+          "scaling": {
+            "allowed": false
+          }
+        },
+        "target": {
+          "prompt": false,
+          "override": false,
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "type": "",
+            "size": "",
+            "units": "ft"
+          }
+        },
+        "range": {
+          "units": "ft",
+          "value": "@scale.empath.aura",
+          "override": false
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "effects": [],
+        "flags": {
+          "empath-class": {
+            "action": "link"
+          }
+        }
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "link",
+      "icon": "base",
+      "level": 1
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!b1b1bdb480c61d07"
+}

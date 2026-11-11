@@ -1,0 +1,191 @@
+{
+  "_id": "021ad7e84521450d",
+  "name": "Icon of Sorcery",
+  "type": "subclass",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Icon of Sorcery. Features at Empath levels 3, 9, 13, and 17.</p><p>@UUID[Compendium.empath-class.features.Item.021ad7e84521450d]{Spellcasting} (level 3)</p><p>@UUID[Compendium.empath-class.features.Item.c51faa148557a08c]{Focused Bond} (level 3)</p><p>@UUID[Compendium.empath-class.features.Item.acbe4bfc77e55c07]{Body Fuel} (level 9)</p><p>@UUID[Compendium.empath-class.features.Item.0fd924362117d036]{Meeting of Minds} (level 13)</p><p>@UUID[Compendium.empath-class.features.Item.9baf3a40312f3984]{Aura Max} (level 17)</p><p>Open Empath Manager → Manage Spells to choose known spells from Spells 2024. Spell slots are not granted. Use the manager’s Cast controls for payment and link concentration.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Axis & Ghostwheel — Empath, D&D Homebrew Wiki",
+      "book": "Empath (homebrew)",
+      "license": "CC-BY-SA-3.0",
+      "rules": "2024"
+    },
+    "identifier": "icon-of-sorcery",
+    "classIdentifier": "empath",
+    "spellcasting": {
+      "progression": "none",
+      "ability": "wis"
+    },
+    "advancement": [
+      {
+        "_id": "263ba60680a221f8",
+        "type": "ItemGrant",
+        "level": 3,
+        "title": "Icon of Sorcery",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.021ad7e84521450d",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.empath-class.features.Item.c51faa148557a08c",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "851bf3e2e6e5f485",
+        "type": "ItemGrant",
+        "level": 9,
+        "title": "Icon of Sorcery",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.acbe4bfc77e55c07",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "a761db6f7d13cde6",
+        "type": "ItemGrant",
+        "level": 13,
+        "title": "Icon of Sorcery",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.0fd924362117d036",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "a69321c78d1e09dc",
+        "type": "ItemGrant",
+        "level": 17,
+        "title": "Icon of Sorcery",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.empath-class.features.Item.9baf3a40312f3984",
+              "optional": false
+            }
+          ],
+          "optional": false
+        },
+        "value": {}
+      },
+      {
+        "_id": "f93fc0ddfb9ead58",
+        "type": "ScaleValue",
+        "title": "Cantrips Known",
+        "configuration": {
+          "identifier": "cantrips-known",
+          "type": "number",
+          "scale": {
+            "3": {
+              "value": 2
+            },
+            "8": {
+              "value": 3
+            },
+            "20": {
+              "value": 4
+            }
+          }
+        },
+        "value": {}
+      },
+      {
+        "_id": "0b650470dd0330c2",
+        "type": "ScaleValue",
+        "title": "Spells Known",
+        "configuration": {
+          "identifier": "spells-known",
+          "type": "number",
+          "scale": {
+            "3": {
+              "value": 2
+            },
+            "5": {
+              "value": 3
+            },
+            "7": {
+              "value": 4
+            },
+            "9": {
+              "value": 5
+            },
+            "11": {
+              "value": 6
+            },
+            "13": {
+              "value": 7
+            },
+            "15": {
+              "value": 8
+            },
+            "17": {
+              "value": 9
+            },
+            "19": {
+              "value": 10
+            }
+          }
+        },
+        "value": {}
+      },
+      {
+        "_id": "02d29cb6fce463d7",
+        "type": "ScaleValue",
+        "title": "Maximum Spell Level",
+        "configuration": {
+          "identifier": "max-spell-level",
+          "type": "number",
+          "scale": {
+            "3": {
+              "value": 1
+            },
+            "5": {
+              "value": 2
+            },
+            "9": {
+              "value": 3
+            },
+            "13": {
+              "value": 4
+            },
+            "17": {
+              "value": 5
+            }
+          }
+        },
+        "value": {}
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {
+    "empath-class": {
+      "key": "sorcery"
+    }
+  },
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!items!021ad7e84521450d"
+}
